@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+//import Sidebar from "./components/Sidebar";
+import MainPanel from "./components/MainPanel"; // ⬅️ 新增這行
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <div style={{ display: "flex" }}>
+        <main style={{ padding: "20px", flexGrow: 1 }}>
+          <MainPanel /> {/* ⬅️ 改成顯示主畫面元件 */}
+        </main>
+      </div>
     </div>
   );
 }
